@@ -58,6 +58,11 @@ const router = new Router({
           path: 'editor',
           meta: { title: '富文本编辑' },
           component: () => import('../views/pages/editor')
+        },
+        {
+          path: 'preview',
+          meta: { title: '图片预览' },
+          component: () => import('../views/pages/preview')
         }
       ]
     },

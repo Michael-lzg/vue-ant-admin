@@ -63,6 +63,14 @@ export default {
             {
               index: 'drag',
               title: '拖拽列表'
+            },
+            {
+              index: 'tree',
+              title: '树形组件'
+            },
+            {
+              index: 'org',
+              title: '组织架构'
             }
           ]
         },
@@ -85,6 +93,10 @@ export default {
             {
               index: 'editor',
               title: '富文本编辑'
+            },
+            {
+              index: 'Markdown',
+              title: 'Markdown编辑'
             }
           ]
         },
