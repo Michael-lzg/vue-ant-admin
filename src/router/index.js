@@ -63,6 +63,21 @@ const router = new Router({
           path: 'preview',
           meta: { title: '图片预览' },
           component: () => import('../views/pages/preview')
+        },
+        {
+          path: 'tree',
+          meta: { title: '树形组件' },
+          component: () => import('../views/pages/tree')
+        },
+        {
+          path: 'org',
+          meta: { title: '组织结构' },
+          component: () => import('../views/pages/org')
+        },
+        {
+          path: 'markdown',
+          meta: { title: 'markdown编辑' },
+          component: () => import('../views/pages/markdown')
         }
       ]
     },

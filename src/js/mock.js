@@ -1,7 +1,7 @@
 import Mock from 'mockjs'
 const Random = Mock.Random
 
-const tableList = function () {
+const list1 = function () {
   const list = []
   for (let i = 0; i < 10; i++) {
     const dataList = {
@@ -19,4 +19,4 @@ const tableList = function () {
   return { list: list }
 }
 
-Mock.mock('http://xxx.com', 'post', tableList)
+Mock.mock('http://xxx.com', 'post', list1)
