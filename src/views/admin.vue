@@ -3,7 +3,7 @@
     <mheader></mheader>
     <menuList></menuList>
     <div class="content-box">
-      <!-- <tag></tag> -->
+      <tag></tag>
       <keep-alive :include="cachList">
         <router-view></router-view>
       </keep-alive>
@@ -14,8 +14,8 @@
 <script>
 import mheader from '../components/common/header'
 import menuList from '../components/common/menu'
-// import tag from '../components/common/tag'
-// import { mapGetters } from 'vuex'
+import tag from '../components/common/tag'
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -23,12 +23,12 @@ export default {
     }
   },
   computed: {
-    // ...mapGetters(['tagList'])
+    ...mapGetters(['tagList'])
   },
   components: {
     mheader,
-    menuList
-    // tag
+    menuList,
+    tag
   },
   watch: {
     tagList (val) {
@@ -57,10 +57,10 @@ export default {
 .content-box {
   height: 100%;
   height: calc(100% - 60px);
-  /* background-color: pink; */
+  background-color: #f6f6f6;
   position: absolute;
-  left: 250px;
-  right: 10px;
+  left: 240px;
+  right: 0;
   top: 70px;
   bottom: 0;
   overflow: auto;

@@ -2,7 +2,8 @@
   <div class="tagList clearfix" v-if="tagList.length>0">
     <div class="tagItem fl" v-for="(item,index) in tagList" :key="index" :class="{'active':item.path === $route.fullPath}">
       <span @click="changeUrl(index)">{{item.title}}</span>
-      <span class="del" @click="delTag(index)">X</span>
+      <a-icon type="close" @click="delTag(index)" class="del" />
+      <!-- <span class="del" @click="delTag(index)">X</span> -->
     </div>
     <div class="tagItem active fr">
       <span @click="closeAll">关闭所有标签</span>
@@ -85,7 +86,8 @@ export default {
 <style scoped lang="less">
 .tagList {
   width: 100%;
-  padding: 5px 0;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd;
   .tagItem {
     padding: 5px 8px;
     margin-right: 6px;
@@ -96,6 +98,7 @@ export default {
     cursor: pointer;
     .del {
       padding-left: 6px;
+      font-size: 10px;
     }
   }
   .active {

@@ -5,6 +5,10 @@ const menu = [
     key: 'index',
     children: [
       {
+        key: 'adminIndex',
+        title: '我的简介'
+      },
+      {
         key: 'artical',
         title: '我的文章'
       }

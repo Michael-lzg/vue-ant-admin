@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="collapse-btn fl" @click="collapseChage">
-      <i class="el-icon-menu"></i>
+      <!-- <i class="el-icon-menu"></i> -->
     </div>
     <div class="logo fl">后台管理系统</div>
     <div class="rightList fr">

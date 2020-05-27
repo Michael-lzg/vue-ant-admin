@@ -12,12 +12,12 @@ const router = new Router({
     {
       path: '/admin',
       component: () => import('../views/admin'),
-      // redirect: 'admin/adminIndex',
+      redirect: 'admin/adminIndex',
       children: [
         {
           path: 'adminIndex',
-          meta: { title: '系统首页' }
-          // component: () => import('../views/pages/adminIndex')
+          meta: { title: '系统首页' },
+          component: () => import('../views/pages/adminIndex')
         },
         {
           path: 'table',
