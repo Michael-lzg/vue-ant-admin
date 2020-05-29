@@ -1,6 +1,6 @@
 <template>
   <div v-if="dataOk">
-    <a-table :columns="columns" :data-source="list" :pagination="pagination" @change="handleTableChange" :rowKey="row=>row.name">
+    <a-table :columns="columns" :data-source="list" :pagination="pagination" @change="handleTableChange" :rowKey="row=>row.name" bordered>
       <span slot="zans" slot-scope="zans">
         <a-rate :default-value="zans" />
       </span>

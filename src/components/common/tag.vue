@@ -86,8 +86,11 @@ export default {
 <style scoped lang="less">
 .tagList {
   width: 100%;
+  height: 40px;
   padding: 5px 10px;
   border-bottom: 1px solid #ddd;
+  position: absolute;
+  top: 0;
   .tagItem {
     padding: 5px 8px;
     margin-right: 6px;

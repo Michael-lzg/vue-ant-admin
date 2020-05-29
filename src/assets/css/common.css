@@ -166,4 +166,9 @@ body{
 .content-box>div{
   padding: 24px;
   background-color: #fff;
+  width: 100%;
+  height: calc(100% - 41px);
+  position: absolute;
+  top: 41px;
+  overflow: auto;
 }
