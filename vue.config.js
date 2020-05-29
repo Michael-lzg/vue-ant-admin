@@ -47,6 +47,9 @@ module.exports = {
   },
 
   configureWebpack: (config) => {
+    config.externals = {
+      echarts: 'echarts'
+    }
 
     if (process.env.NODE_ENV === 'production') {
       config.plugins.push(new BundleAnalyzerPlugin())

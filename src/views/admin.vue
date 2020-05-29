@@ -55,7 +55,7 @@ export default {
   padding-top: 70px;
 }
 .content-box {
-  width: 100%;
+  width: calc(100% - 240px);
   height: calc(100% - 60px);
   background-color: #f6f6f6;
   position: absolute;

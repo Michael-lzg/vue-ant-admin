@@ -89,11 +89,11 @@ const menu = [
     title: '可视化',
     children: [
       {
-        key: 'charts',
-        title: 'charts图表'
+        key: 'echarts',
+        title: 'echarts图表'
       },
       {
-        key: 'map',
+        key: 'bMap',
         title: '高德地图'
       },
       {

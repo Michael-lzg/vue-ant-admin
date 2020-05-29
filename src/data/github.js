@@ -1,4 +1,4 @@
-let githubList = [
+const githubList = [
   {
     title: '集成丰富插件的后台管理系统',
     tag: ['管理后台', 'element-ui', 'vue插件'],

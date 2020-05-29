@@ -1,4 +1,4 @@
-let articalList = [
+const articalList = [
   {
     title: 'vue开发规范及文档',
     tag: ['vue2.0', '开发规范', '脚手架'],

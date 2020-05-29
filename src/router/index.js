@@ -78,6 +78,26 @@ const router = new Router({
           path: 'markdown',
           meta: { title: 'markdown编辑' },
           component: () => import('../views/pages/markdown')
+        },
+        {
+          path: 'echarts',
+          meta: { title: 'echarts图表' },
+          component: () => import('../views/pages/echarts.vue')
+        },
+        {
+          path: 'bMap',
+          meta: { title: '高德地图' },
+          component: () => import('../views/pages/bMap.vue')
+        },
+        {
+          path: 'ChinaMap',
+          meta: { title: '中国地图' },
+          component: () => import('../views/pages/ChinaMap')
+        },
+        {
+          path: 'artical',
+          meta: { title: '我的文章' },
+          component: () => import('../views/pages/artical')
         }
       ]
     },
