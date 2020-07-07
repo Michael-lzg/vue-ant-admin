@@ -3,7 +3,7 @@
     <mheader></mheader>
     <menuList></menuList>
     <div class="content-box">
-      <tag></tag>
+      <!-- <tag></tag> -->
       <keep-alive :include="cachList">
         <router-view></router-view>
       </keep-alive>
@@ -14,7 +14,7 @@
 <script>
 import mheader from '../components/common/header'
 import menuList from '../components/common/menu'
-import tag from '../components/common/tag'
+// import tag from '../components/common/tag'
 import { mapGetters } from 'vuex'
 export default {
   data () {
@@ -27,8 +27,8 @@ export default {
   },
   components: {
     mheader,
-    menuList,
-    tag
+    menuList
+    // tag
   },
   watch: {
     tagList (val) {

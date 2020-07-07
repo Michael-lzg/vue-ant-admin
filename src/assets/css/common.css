@@ -167,8 +167,10 @@ body{
   padding: 24px;
   background-color: #fff;
   width: 100%;
-  height: calc(100% - 48px);
+  height: 100%;
+  /* height: calc(100% - 48px); */
   position: absolute;
-  top: 41px;
+  top: 0;
+  /* top: 41px; */
   overflow: auto;
 }

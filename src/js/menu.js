@@ -99,6 +99,14 @@ const menu = [
       {
         key: 'ChinaMap',
         title: '中国地图'
+      },
+      {
+        key: 'ChinaScatterMap',
+        title: '中国散点图'
+      },
+      {
+        key: 'provinceMap',
+        title: '省份地图'
       }
     ]
   }

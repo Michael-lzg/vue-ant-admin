@@ -7,8 +7,8 @@
 
 <script>
 import echarts from 'echarts'
-import '../../js/china'
-// import 'echarts/map/js/china' // 引入china.js地图文件
+// import '../../js/china'
+import 'echarts/map/js/china' // 引入china.js地图文件
 // import 'echarts/theme/shine.js'
 export default {
   methods: {
@@ -118,8 +118,8 @@ export default {
 </script>
 
 <style scoped>
-.maiPage {
+.mainPage {
   background-color: #fff;
-  height: calc(100% - 48px);
+  /* height: calc(100% - 48px); */
 }
 </style>

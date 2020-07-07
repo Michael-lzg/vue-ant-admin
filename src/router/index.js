@@ -95,6 +95,16 @@ const router = new Router({
           component: () => import('../views/pages/ChinaMap')
         },
         {
+          path: 'ChinaScatterMap',
+          meta: { title: '中国散点图' },
+          component: () => import('../views/pages/ChinaScatterMap')
+        },
+        {
+          path: 'provinceMap',
+          meta: { title: '省份地图' },
+          component: () => import('../views/pages/provinceMap')
+        },
+        {
           path: 'artical',
           meta: { title: '我的文章' },
           component: () => import('../views/pages/artical')
