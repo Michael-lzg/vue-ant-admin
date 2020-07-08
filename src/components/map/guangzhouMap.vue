@@ -6,6 +6,7 @@
 
 <script>
 import echarts from 'echarts'
+// import '../../js/guangzhou'
 import 'echarts/map/js/province/guangdong' // 引入china.js地图文件
 export default {
   methods: {
