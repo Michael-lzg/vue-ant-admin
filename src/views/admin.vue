@@ -52,11 +52,11 @@ export default {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding-top: 70px;
+  padding-top: 69px;
 }
 .content-box {
   width: calc(100% - 240px);
-  height: calc(100% - 60px);
+  height: calc(100% - 70px);
   background-color: #f6f6f6;
   position: absolute;
   left: 240px;
@@ -64,5 +64,6 @@ export default {
   top: 70px;
   bottom: 0;
   overflow: auto;
+  padding: 12px;
 }
 </style>

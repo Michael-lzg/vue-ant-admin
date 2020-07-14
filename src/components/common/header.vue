@@ -1,39 +1,50 @@
 <template>
   <div class="header">
-    <div class="collapse-btn fl" @click="collapseChage">
-      <!-- <i class="el-icon-menu"></i> -->
-    </div>
-    <div class="logo fl">后台管理系统</div>
-    <div class="rightList fr">
-      <div class="btn-fullscreen fl cupo" @click="handleFullScreen">
-        <!-- <el-tooltip effect="dark" :content="fullscreen?`取消全屏`:`全屏`" placement="bottom">
-          <i class="el-icon-rank"></i>
-        </el-tooltip> -->
+    <!-- <div class="collapse-btn fl" @click="collapseChage">
+    </div> -->
+    <div class="logo">后台管理系统</div>
+    <div class="main clearfix">
+      <div class="breadcrumb fl">面包屑导航</div>
+
+      <div class="user-avator fr">
+        <img src="../../assets/img/avatar.png" width="40" class="cupo">
+      </div>
+
+      <div class="name fr">
+        <a-dropdown>
+          <a>lzg
+            <a-icon type="caret-down" />
+          </a>
+          <a-menu slot="overlay">
+            <a-menu-item>
+              <a href="javascript:;">1st menu item</a>
+            </a-menu-item>
+            <a-menu-item>
+              <a href="javascript:;">2nd menu item</a>
+            </a-menu-item>
+            <a-menu-item>
+              <a href="javascript:;">3rd menu item</a>
+            </a-menu-item>
+          </a-menu>
+        </a-dropdown>
+      </div>
+
+      <div class="notice fr">
+        <span style="margin-right:24px">
+          <a-badge :count="3">
+            <a-icon type="qq" style="font-size:20px;margin-top:4px" />
+          </a-badge>
+        </span>
+      </div>
+      <!-- <div class="btn-fullscreen fr cupo" @click="handleFullScreen">
         <a-tooltip placement="topLeft">
           <template slot="title">
             <span>{{fullscreen?`取消全屏`:`全屏`}}</span>
           </template>
           <a-icon type="fullscreen" />
         </a-tooltip>
-      </div>
-      <div class="user-avator fl">
-        <img src="../../assets/img/avatar.png" width="40" class="cupo">
-      </div>
-      <!-- 用户名下拉菜单 -->
-      <!-- <el-dropdown class="user-name fl cupo" trigger="click" @command="handleCommand">
-        <span class="el-dropdown-link">admin
-          <i class="el-icon-caret-bottom"></i>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <a href="https://me.csdn.net/Michael_lzg" target="_blank">
-            <el-dropdown-item>作者博客</el-dropdown-item>
-          </a>
-          <a href="https://github.com/Michael-lzg/vue-management" target="_blank">
-            <el-dropdown-item>项目仓库</el-dropdown-item>
-          </a>
-          <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown> -->
+      </div> -->
+
     </div>
   </div>
 </template>
@@ -88,14 +99,15 @@ export default {
 .header {
   width: 100%;
   height: 70px;
-  background-color: rgb(45, 58, 75);
+  // background-color: rgb(45, 58, 75);
+
   position: absolute;
   top: 0;
   left: 0;
   line-height: 70px;
-  color: white;
+  // color: white;
   padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 240px;
 }
 .collapse-btn {
   font-size: 22px;
@@ -104,6 +116,18 @@ export default {
 }
 .logo {
   font-size: 22px;
+  background-color: rgb(45, 58, 75);
+  width: 240px;
+  padding-left: 20px;
+  color: white;
+  position: absolute;
+  left: 0;
+}
+.main {
+  padding-left: 20px;
+  // width: calc(100% - 240px);
+  // height: 70px;
+  // border-bottom: 1px solid #ddd;
 }
 .user-avator {
   margin-left: 20px;

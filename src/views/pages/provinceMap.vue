@@ -31,7 +31,7 @@ export default {
 <style lang="less" scoped>
 .mainPage {
   background-color: #f6f6f6;
-  padding: 12px;
+  padding: 0px !important;
 }
 .inner {
   width: 100%;

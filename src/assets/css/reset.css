@@ -50,7 +50,8 @@ ol {
 
 a {
     text-decoration: none;
-    background-color: transparent
+    background-color: transparent;
+    color: #000 !important;
 }
 
 a:hover,

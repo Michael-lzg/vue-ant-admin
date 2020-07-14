@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="padding:24px">
     <div class="tips">v-org-tree：一款展示组织架构的组件。 访问地址：
       <a href="https://github.com/lison16/v-org-tree" target="_blank" class="c1">v-viewer</a>
     </div>

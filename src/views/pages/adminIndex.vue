@@ -86,9 +86,10 @@ export default {
 
 <style scoped lang="less">
 .mainpage {
-  padding: 15px;
+  // padding: 15px;
   overflow: auto;
   background-color: #f6f6f6;
+  padding: 0 !important;
 }
 .inner {
   height: 100%;
