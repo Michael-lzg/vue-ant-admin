@@ -6,7 +6,7 @@
           <a-icon type="user" />
           <span>{{item.title}}</span>
         </span>
-        <a-menu-item v-for="(v) in item.children" :key="v.key" @click="toUrl(v.key)">{{v.title}}</a-menu-item>
+        <a-menu-item v-for="(v) in item.children" :key="v.key" @click="toUrl(item,v)">{{v.title}}</a-menu-item>
       </a-sub-menu>
     </a-menu>
   </div>
@@ -21,13 +21,14 @@ export default {
       router: true,
       openList: [],
       list: menu
-
     }
   },
   methods: {
-    toUrl (path) {
+    toUrl (item, v) {
+      const breadcrumbList = [item.title, v.title]
+      this.$store.commit('updateBreadcrumbList', breadcrumbList)
       this.$router.push({
-        path: '/admin/' + path
+        path: '/admin/' + v.key
       })
     }
   }
@@ -53,7 +54,10 @@ export default {
   font-size: 18px;
   display: inline-block;
 }
-.ant-menu-dark, .ant-menu-inline, .ant-menu-sub, .ant-menu-dark .ant-menu-inline.ant-menu-sub{
+.ant-menu-dark,
+.ant-menu-inline,
+.ant-menu-sub,
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
   // background-color: rgb(45, 58, 75) !important;
   box-shadow: none !important;
 }

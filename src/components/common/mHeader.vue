@@ -3,6 +3,10 @@
     <a-layout-header style="background: #fff; padding: 0">
       <a-icon class="trigger" :type="collapsed ? 'menu-unfold' : 'menu-fold'" @click="trigger" />
 
+      <a-breadcrumb style="display:inline-block;margin-left:15px">
+        <a-breadcrumb-item v-for="item in breadcrumbList" :key="item">{{item}}</a-breadcrumb-item>
+      </a-breadcrumb>
+
       <div class="avator fr" style="margin-left:15px">
         <img src="../../assets/img/avatar.png" width="40">
       </div>
@@ -36,11 +40,15 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
       collapsed: false
     }
+  },
+  computed: {
+    ...mapGetters(['breadcrumbList'])
   },
   methods: {
     trigger () {
