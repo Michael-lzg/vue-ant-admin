@@ -19,11 +19,11 @@ const menu = [
     key: 'base',
     children: [
       {
-        key: 'table',
+        key: 'basicTable',
         title: '列表数据'
       },
       {
-        key: 'form',
+        key: 'basicForm',
         title: '基础表单'
       },
       {

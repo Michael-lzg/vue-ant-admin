@@ -24,6 +24,7 @@ import guangDongMap from '../../components/map/guangDongMap'
 import guangzhouMap from '../../components/map/guangzhouMap'
 
 export default {
+  name: 'provinceMap',
   components: { henanMap, heatMap, guangDongMap, guangzhouMap }
 }
 </script>

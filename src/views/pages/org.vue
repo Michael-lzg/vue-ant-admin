@@ -13,6 +13,7 @@ import OrgTree from 'v-org-tree'
 import 'v-org-tree/dist/v-org-tree.css'
 Vue.use(OrgTree)
 export default {
+  name: 'org',
   data () {
     return {
       data: {

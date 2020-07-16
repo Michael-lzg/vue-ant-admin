@@ -23,6 +23,7 @@ import kLine from '../../components/echart/kLine'
 import lineBar from '../../components/echart/lineBar'
 import barChart from '../../components/echart/bar'
 export default {
+  name: 'echarts',
   components: { lineChart, barChart, kLine, lineBar }
 }
 </script>

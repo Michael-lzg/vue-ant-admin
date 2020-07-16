@@ -13,7 +13,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'pdf'
+}
 </script>
 
 <style lang="less" scoped></style>

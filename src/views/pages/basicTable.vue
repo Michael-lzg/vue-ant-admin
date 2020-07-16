@@ -51,6 +51,7 @@ const columns = [
   }
 ]
 export default {
+  name: 'basicTable',
   data () {
     return {
       list: [],

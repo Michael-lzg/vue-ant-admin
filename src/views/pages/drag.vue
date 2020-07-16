@@ -27,7 +27,7 @@
 import draggable from 'vuedraggable'
 
 export default {
-  name: 'DndList',
+  name: 'drag',
   components: { draggable },
   data () {
     return {

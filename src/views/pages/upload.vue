@@ -31,6 +31,7 @@ function getBase64 (file) {
 }
 export default {
   components: { vueCropper },
+  name: 'upload',
   data () {
     return {
       previewVisible: false,

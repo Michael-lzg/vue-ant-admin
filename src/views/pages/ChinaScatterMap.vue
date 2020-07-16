@@ -7,7 +7,7 @@
 import echarts from 'echarts'
 import 'echarts/map/js/china' // 引入中国地图数据
 export default {
-  name: 'ChinaMap',
+  name: 'ChinaScatterMap',
   data () {
     return {
       echartElement: null

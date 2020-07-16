@@ -56,9 +56,10 @@ const list = [
   { role: '测试人员', name: '刘大', description: '专门提bug' },
   { role: '产品经理', name: '邓晓', description: '人人喊打的人' },
   { role: 'UI设计', name: '张红', description: '漂亮美眉' },
-  { role: '运维人员', name: '王大锤', description: '通宵熬夜的主' }
+  { role: '运维人员', name: '王二锤', description: '通宵熬夜的主' }
 ]
 export default {
+  name: 'tree',
   data () {
     return {
       list: list,

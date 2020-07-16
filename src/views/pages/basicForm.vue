@@ -1,5 +1,5 @@
 <template>
-  <div class="form">
+  <div class="form" style="width:600px">
     <a-form :form="form" @submit="handleSubmit">
       <a-form-item v-bind="formItemLayout" label="E-mail">
         <a-input v-decorator="[
@@ -164,6 +164,7 @@ const residences = [
 ]
 
 export default {
+  name: 'basicForm',
   data () {
     return {
       confirmDirty: false,
@@ -236,9 +237,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less">
-.form {
-  width: 660px;
-}
-</style>

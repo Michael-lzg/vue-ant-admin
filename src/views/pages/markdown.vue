@@ -13,6 +13,7 @@ import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 Vue.use(mavonEditor)
 export default {
+  name: 'markdown',
   data () {
     return { value: '' }
   }

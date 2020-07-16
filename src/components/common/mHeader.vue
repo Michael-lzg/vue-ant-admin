@@ -7,8 +7,8 @@
         <a-breadcrumb-item v-for="item in breadcrumbList" :key="item">{{item}}</a-breadcrumb-item>
       </a-breadcrumb>
 
-      <div class="avator fr" style="margin-left:15px">
-        <img src="../../assets/img/avatar.png" width="40">
+      <div class="fr" style="margin-left:15px">
+        <img src="../../assets/img/admin.jpg" width="30" style="border-radius:30px;">
       </div>
       <div class="name fr">
         <a-dropdown>

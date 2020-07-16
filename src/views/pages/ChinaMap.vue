@@ -11,6 +11,7 @@ import echarts from 'echarts'
 import 'echarts/map/js/china' // 引入china.js地图文件
 // import 'echarts/theme/shine.js'
 export default {
+  name: 'ChinaMap',
   methods: {
     randomData () {
       return Math.round(Math.random() * 500)
