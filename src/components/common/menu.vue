@@ -3,7 +3,7 @@
     <a-menu :default-selected-keys="['1']" :default-open-keys="['sub1']" mode="inline" theme="dark" :inline-collapsed="collapsed">
       <a-sub-menu v-for="(item,index) in list" :key="index">
         <span slot="title">
-          <a-icon type="mail" />
+          <a-icon type="user" />
           <span>{{item.title}}</span>
         </span>
         <a-menu-item v-for="(v) in item.children" :key="v.key" @click="toUrl(v.key)">{{v.title}}</a-menu-item>
@@ -36,10 +36,10 @@ export default {
 
 <style lang="less">
 .menu {
-  width: 240px;
+  // width: 200px;
   height: 100%;
   overflow-y: auto;
-  background-color: rgb(45, 58, 75);
+  // background-color: rgb(45, 58, 75);
   position: relative;
 }
 .menu::-webkit-scrollbar {
@@ -54,7 +54,7 @@ export default {
   display: inline-block;
 }
 .ant-menu-dark, .ant-menu-inline, .ant-menu-sub, .ant-menu-dark .ant-menu-inline.ant-menu-sub{
-  background-color: rgb(45, 58, 75) !important;
+  // background-color: rgb(45, 58, 75) !important;
   box-shadow: none !important;
 }
 </style>

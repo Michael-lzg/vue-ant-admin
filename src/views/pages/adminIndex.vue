@@ -7,12 +7,12 @@
             <img src="../../assets/img/admin.jpg" alt="" width="120">
           </div>
           <div class="info">
-            <div class="name">lzg | 广州</div>
-            <div class="job c8">web前端开发</div>
+            <div class="name">lzg</div>
+            <div class="job c8">天道酬勤，自强不息</div>
             <div class="tag">
-              <a-tag color="blue"> javascript </a-tag>
-              <a-tag color="blue"> Vue </a-tag>
-              <a-tag color="blue"> webpack </a-tag>
+              <a-tag color="blue"> 很有想法的 </a-tag>
+              <a-tag color="blue"> 专注前端 </a-tag>
+              <a-tag color="blue"> not only 切图仔 </a-tag>
             </div>
           </div>
         </div>
@@ -99,20 +99,21 @@ export default {
   width: 30%;
 }
 .left-top-block {
-  height: 200px;
+  // height: 200px;
   background-color: white;
   padding: 20px;
-  padding-left: 120px;
+  text-align: center;
+  // padding-left: 120px;
   position: relative;
   .img {
-    position: absolute;
-    left: 20px;
+    // position: absolute;
+    // left: 20px;
     img {
       border-radius: 120px;
     }
   }
   .info {
-    margin-left: 35px;
+    // margin-left: 35px;
     font-size: 18px;
     line-height: 30px;
     margin-top: 20px;
@@ -152,7 +153,7 @@ export default {
   }
 }
 .right-block {
-  width: 54%;
+  width: 70%;
   padding-left: 15px;
   .tab {
     padding: 15px;
