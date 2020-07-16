@@ -7,9 +7,14 @@
 <script>
 import echarts from 'echarts'
 export default {
+  data () {
+    return {
+      myChart: null
+    }
+  },
   methods: {
     drawLine () {
-      const myChart = echarts.init(document.getElementById('line'))
+      this.myChart = echarts.init(document.getElementById('line'))
       const option = {
         // title: {
         //   text: '堆叠区域图'
@@ -120,11 +125,19 @@ export default {
         ]
       }
 
-      myChart.setOption(option)
+      this.myChart.setOption(option)
     }
   },
   mounted () {
     this.drawLine()
+    window.addEventListener('resize', () => {
+      this.myChart.resize()
+    })
+  },
+  destroyed () {
+    window.removeEventListener('resize', () => {
+      this.myChart.resize()
+    })
   }
 }
 </script>

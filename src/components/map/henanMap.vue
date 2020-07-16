@@ -8,12 +8,17 @@
 import echarts from 'echarts'
 import 'echarts/map/js/province/henan' // 引入china.js地图文件
 export default {
+  data () {
+    return {
+      myChart: null
+    }
+  },
   methods: {
     randomData () {
       return Math.round(Math.random() * 500)
     },
     drawChinaMap () {
-      const myChart = echarts.init(document.getElementById('map'), 'shine')
+      this.myChart = echarts.init(document.getElementById('map'), 'shine')
 
       const data = [
         { name: '郑州市', value: '100' },
@@ -97,11 +102,19 @@ export default {
         ]
       }
 
-      myChart.setOption(option)
+      this.myChart.setOption(option)
     }
   },
   mounted () {
     this.drawChinaMap()
+    window.addEventListener('resize', () => {
+      this.myChart.resize()
+    })
+  },
+  destroyed () {
+    window.removeEventListener('resize', () => {
+      this.myChart.resize()
+    })
   }
 }
 </script>

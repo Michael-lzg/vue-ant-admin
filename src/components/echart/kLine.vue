@@ -7,9 +7,14 @@
 <script>
 import echarts from 'echarts'
 export default {
+  data () {
+    return {
+      myChart: null
+    }
+  },
   methods: {
     drawLine () {
-      const myChart = echarts.init(document.getElementById('kline'))
+      this.myChart = echarts.init(document.getElementById('kline'))
 
       var colors = ['#d14a61', '#FFB900']
       const option = {
@@ -42,11 +47,19 @@ export default {
         }]
       }
 
-      myChart.setOption(option)
+      this.myChart.setOption(option)
     }
   },
   mounted () {
     this.drawLine()
+    window.addEventListener('resize', () => {
+      this.myChart.resize()
+    })
+  },
+  destroyed () {
+    window.removeEventListener('resize', () => {
+      this.myChart.resize()
+    })
   }
 }
 </script>
