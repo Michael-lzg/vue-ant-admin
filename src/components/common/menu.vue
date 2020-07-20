@@ -39,7 +39,9 @@ export default {
 .menu {
   // width: 200px;
   height: 100%;
+  // height: calc(100% - 32px);
   overflow-y: auto;
+  padding-bottom: 32px;
   // background-color: rgb(45, 58, 75);
   position: relative;
 }
