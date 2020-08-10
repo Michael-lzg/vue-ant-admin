@@ -42,10 +42,10 @@
         <div class="tab">
           <a-tabs default-active-key="1">
             <a-tab-pane key="1" tab="掘金文章">
-              <artical></artical>
+              <articalList></articalList>
             </a-tab-pane>
             <a-tab-pane key="2" tab="github项目" force-render>
-              <github></github>
+              <githubList></githubList>
             </a-tab-pane>
             <a-tab-pane key="3" tab="开源项目">
               Content of Tab Pane 3
@@ -59,8 +59,8 @@
 </template>
 
 <script>
-import artical from '../../components/artical'
-import github from '../../components/github'
+import articalList from '../../components/articalList'
+import githubList from '../../components/githubList'
 export default {
   name: 'adminIndex',
   data () {
@@ -77,7 +77,7 @@ export default {
       ]
     }
   },
-  components: { artical, github },
+  components: { articalList, githubList },
   methods: {
     handleClick () { }
   }

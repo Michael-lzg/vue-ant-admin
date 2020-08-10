@@ -2,8 +2,21 @@
   <div class="mainpage clearfix">
     <div class="inner">
       <div class="left-block fl">
-
+        <div class="tab">
+          <a-tabs default-active-key="1">
+            <a-tab-pane key="1" tab="掘金文章">
+              <articalList></articalList>
+            </a-tab-pane>
+            <a-tab-pane key="2" tab="github项目" force-render>
+              <githubList></githubList>
+            </a-tab-pane>
+            <a-tab-pane key="3" tab="开源项目">
+              Content of Tab Pane 3
+            </a-tab-pane>
+          </a-tabs>
+        </div>
       </div>
+
       <div class="right-block fl">
         <div class="block">
           <div class="title">社区活跃度</div>
@@ -24,9 +37,11 @@
 <script>
 import radar from '../../components/radar'
 import pie from '../../components/pie'
+import articalList from '../../components/articalList'
+import githubList from '../../components/githubList'
 export default {
   name: 'artical',
-  components: { radar, pie },
+  components: { radar, pie, articalList, githubList },
   data () {
     return {
 
@@ -51,18 +66,18 @@ export default {
 .left-block {
   width: 75%;
   height: 100%;
-  // background-color: #fff;
+  padding-right: 15px;
+  .tab{
+    background-color: #fff;
+    padding-left: 15px;
+  }
 }
 .right-block {
   width: 25%;
   height: 100%;
-  // padding-right: 15px;
-  // padding: 15px;
-  // background-color: #fff;
   .block {
     background-color: #fff;
     padding: 0 15px 15px 15px;
-
     margin-bottom: 15px;
   }
   .title {

@@ -1,6 +1,6 @@
 <template>
-  <div v-if="dataOk">
-    <a-table :columns="columns" :data-source="list" :pagination="pagination" @change="handleTableChange" :rowKey="row=>row.name" bordered>
+  <div>
+    <a-table :columns="columns" :data-source="list" :pagination="pagination" @change="handleTableChange" :rowKey="row=>row.name" bordered :loading="loading">
       <span slot="zans" slot-scope="zans">
         <a-rate :default-value="zans" />
       </span>
@@ -56,8 +56,8 @@ export default {
     return {
       list: [],
       columns: columns,
-      dataOk: false,
-      pagination: { total: 100 }
+      pagination: { total: 100 },
+      loading: false
     }
   },
   methods: {
@@ -66,10 +66,10 @@ export default {
       console.log(row)
     },
     getList () {
+      this.loading = true
       this.axios.post('http://xxx.com', {}).then(res => {
-        console.log(res)
         this.list = res.list
-        this.dataOk = true
+        this.loading = false
       })
     },
     handleTableChange () {

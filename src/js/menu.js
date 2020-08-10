@@ -3,6 +3,7 @@ const menu = [
   {
     title: '系统首页',
     key: 'index',
+    icon: 'user',
     children: [
       {
         key: 'adminIndex',
@@ -17,6 +18,7 @@ const menu = [
   {
     title: '基础组件',
     key: 'base',
+    icon: 'table',
     children: [
       {
         key: 'basicTable',
@@ -47,6 +49,7 @@ const menu = [
   {
     key: 'file',
     title: '文件相关',
+    icon: 'solution',
     children: [
       {
         key: 'upload',
@@ -73,6 +76,7 @@ const menu = [
   {
     key: 'pic',
     title: '图片相关',
+    icon: 'picture',
     children: [
       {
         key: 'preview',
@@ -87,6 +91,7 @@ const menu = [
   {
     key: 'chart',
     title: '可视化',
+    icon: 'bar-chart',
     children: [
       {
         key: 'echarts',

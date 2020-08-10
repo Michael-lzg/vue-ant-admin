@@ -3,7 +3,7 @@
     <a-menu :default-selected-keys="['1']" :default-open-keys="['sub1']" mode="inline" theme="dark" :inline-collapsed="collapsed">
       <a-sub-menu v-for="(item,index) in list" :key="index">
         <span slot="title">
-          <a-icon type="user" />
+          <a-icon :type="item.icon" />
           <span>{{item.title}}</span>
         </span>
         <a-menu-item v-for="(v) in item.children" :key="v.key" @click="toUrl(item,v)">{{v.title}}</a-menu-item>
@@ -20,7 +20,8 @@ export default {
       collapsed: false,
       router: true,
       openList: [],
-      list: menu
+      list: menu,
+      activeRouter: ''
     }
   },
   methods: {
@@ -30,7 +31,21 @@ export default {
       this.$router.push({
         path: '/admin/' + v.key
       })
+    },
+    initRouter () {
+      for (const val of this.list) {
+        for (const val1 of val.children) {
+          if (val1.key === this.activeRouter) {
+            const breadcrumbList = [val.title, val1.title]
+            this.$store.commit('updateBreadcrumbList', breadcrumbList)
+          }
+        }
+      }
     }
+  },
+  mounted () {
+    this.activeRouter = this.$route.path.split('/')[2]
+    this.initRouter()
   }
 }
 </script>

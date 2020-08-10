@@ -13,6 +13,7 @@
 <script>
 import { articalList } from '../data/artical'
 export default {
+  name: 'articalList',
   data () {
     return {
       list: articalList
@@ -26,6 +27,7 @@ export default {
 .list {
   height: 100%;
   overflow: auto;
+  background-color: #fff;
 }
 .listItem {
   border-bottom: 1px solid #eee;
