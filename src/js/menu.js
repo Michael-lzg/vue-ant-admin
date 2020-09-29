@@ -85,6 +85,10 @@ const menu = [
       {
         key: 'swiper',
         title: '图片特效'
+      },
+      {
+        key: 'Video',
+        title: '视频播放'
       }
     ]
   },
