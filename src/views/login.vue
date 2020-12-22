@@ -13,8 +13,7 @@
       </div>
       <div class="item colRed">{{tsPassword}}</div>
       <div class="btn">
-        <a-button type="primary" size="large" @click="toLogin">Primary</a-button>
-        <!-- <el-button type="primary" @click="toLogin">登录</el-button> -->
+        <a-button type="primary" size="large" @click="toLogin">登录</a-button>
       </div>
     </div>
   </div>

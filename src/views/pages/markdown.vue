@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div class="tips">mavon-editor：一款强大的Vue-markdown编辑器插件。 访问地址：
-      <a href="https://github.com/hinesboy/mavonEditor/blob/master/doc/cn/use.md" target="_blank" class="c1">mavon-editor</a>
+    <div class="tips"><a href="https://github.com/hinesboy/mavonEditor/blob/master/doc/cn/use.md" target="_blank" class="c1">mavon-editor</a>：一款强大的Vue-markdown编辑器插件。
     </div>
     <mavon-editor v-model="value" style="height: 500px" />
   </div>

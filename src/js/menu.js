@@ -84,7 +84,7 @@ const menu = [
       },
       {
         key: 'swiper',
-        title: '图片特效'
+        title: '图片剪裁'
       },
       {
         key: 'Video',

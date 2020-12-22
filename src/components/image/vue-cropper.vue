@@ -1,8 +1,5 @@
 <template>
-  <div class="mainPage">
-    <div class="tips">vue-cropperjs：一个封装了 cropperjs 的 Vue 组件，支持图片剪裁。 访问地址：
-      <a href="https://github.com/Agontuk/vue-cropperjs" target="_blank" class="c1">vue-cropperjs</a>
-    </div>
+  <div>
     <div class="crop-demo">
       <img :src="activeImg" class="pre-img" width="85" height="85">
       <span class="crop-demo-btn">选择图片
@@ -57,10 +54,6 @@ export default {
 </script>
 
 <style scoped>
-.tips {
-  padding: 15px 0;
-  margin: 10px 0;
-}
 .crop-demo-btn {
   position: relative;
   width: 100px;

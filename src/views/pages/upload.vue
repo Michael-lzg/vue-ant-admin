@@ -1,5 +1,5 @@
 <template>
-  <div class="upload clearfix">
+  <div>
     <div class="item">
       <div class="tips">用户可以上传图片并在列表中显示缩略图。当上传照片数到达限制后，上传按钮消失</div>
       <a-upload action="https://www.mocky.io/v2/5cc8019d300000980a055e76" list-type="picture-card" :file-list="fileList" @preview="handlePreview" @change="handleChange">
@@ -19,7 +19,7 @@
   </div>
 </template>
 <script>
-import vueCropper from '../../components/vue-cropper'
+import vueCropper from '../../components/image/vue-cropper'
 
 function getBase64 (file) {
   return new Promise((resolve, reject) => {
@@ -74,9 +74,6 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.upload {
-  padding: 24px;
-}
 /* you can make up upload button and sample style by using stylesheets */
 .ant-upload-select-picture-card i {
   font-size: 32px;

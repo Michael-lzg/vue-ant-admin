@@ -1,12 +1,10 @@
 <template>
-  <div class="mainPage">
+  <div>
     <div class="tips">
-      Vue-Quill-Editor：基于Quill、适用于Vue2的富文本编辑器。 访问地址：
-      <a href="https://github.com/surmon-china/vue-quill-editor" target="_blank" class="c1">Vue-Quill-Editor</a>
+      <a href="https://github.com/surmon-china/vue-quill-editor" target="_blank" class="c1">Vue-Quill-Editor</a>：基于Quill、适用于Vue2的富文本编辑器。
     </div>
     <div class="tips">
-      Tinymce：各种功能强大富文本编辑器，还能去格式化。 访问地址：
-      <a href="https://github.com/tinymce/tinymce" target="_blank" class="c1">Tinymce</a>
+      <a href="https://github.com/tinymce/tinymce" target="_blank" class="c1">Tinymce</a>：各种功能强大富文本编辑器，还能去格式化。
     </div>
     <quill-editor ref="myTextEditor" v-model="content" :options="editorOption"></quill-editor>
 
@@ -29,6 +27,9 @@ export default {
       }
     }
   },
+  components: {
+    quillEditor
+  },
   methods: {
     onEditorChange ({ editor, html, text }) {
       this.content = html
@@ -37,22 +38,15 @@ export default {
       console.log(this.content)
       this.$message.success('提交成功！')
     }
-  },
-  components: {
-    quillEditor
   }
+
 }
 </script>
 
-<style scoped>
-.tips{
-  padding: 5px 0 !important;
-}
+<style>
 .editor-btn {
   margin-top: 10px;
 }
-</style>
-<style>
 .ql-editor {
   height: 400px !important;
 }

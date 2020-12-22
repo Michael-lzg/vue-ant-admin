@@ -60,8 +60,6 @@ export default {
 
 <style lang="less" scoped>
 .dndList {
-  background: #fff;
-  padding: 24px;
   &:after {
     content: "";
     display: table;
@@ -69,15 +67,9 @@ export default {
   }
   .dndList-list {
     float: left;
-    padding-bottom: 30px;
     width: 48%;
     &:first-of-type {
       margin-right: 2%;
-    }
-    .dragArea {
-      margin-top: 15px;
-      min-height: 50px;
-      padding-bottom: 30px;
     }
   }
 }
@@ -86,7 +78,7 @@ export default {
   cursor: pointer;
   position: relative;
   font-size: 14px;
-  padding: 5px 12px;
+  padding: 8px 12px;
   margin-top: 4px;
   border: 1px solid #bfcbd9;
   transition: all 1s;

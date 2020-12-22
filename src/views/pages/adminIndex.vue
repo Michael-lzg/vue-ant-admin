@@ -1,21 +1,36 @@
 <template>
   <div class="mainpage clearfix">
     <div class="inner">
-      <div class="left-block fl">
+      <div class="top-info-block">
         <div class="left-top-block">
           <div class="img">
             <img src="../../assets/img/admin.jpg" alt="" width="120">
           </div>
           <div class="info">
-            <div class="name">lzg</div>
-            <div class="job c8">天道酬勤，自强不息</div>
+            <div class="name c8">早安，admin！</div>
+            <div class="job">天道酬勤，自强不息</div>
             <div class="tag">
               <a-tag color="blue"> 很有想法的 </a-tag>
               <a-tag color="blue"> 专注前端 </a-tag>
-              <a-tag color="blue"> not only 切图仔 </a-tag>
+              <!-- <a-tag color="blue"> not only 切图仔 </a-tag> -->
             </div>
           </div>
         </div>
+      </div>
+      <div class="left-block fl">
+        <!-- <div class="left-top-block">
+          <div class="img">
+            <img src="../../assets/img/admin.jpg" alt="" width="120">
+          </div>
+          <div class="info">
+            <div class="name c8">早安，admin！</div>
+            <div class="job">天道酬勤，自强不息</div>
+            <div class="tag">
+              <a-tag color="blue"> 很有想法的 </a-tag>
+              <a-tag color="blue"> 专注前端 </a-tag>
+            </div>
+          </div>
+        </div> -->
         <div class="left-mid-block">
           <div class="title">技术技能</div>
           javaScript
@@ -95,35 +110,39 @@ export default {
   height: 100%;
   width: 100%;
 }
+.top-info-block{
+  margin-bottom: 10px;
+}
 .left-block {
   width: 30%;
 }
 .left-top-block {
-  // height: 200px;
   background-color: white;
   padding: 20px;
-  text-align: center;
-  // padding-left: 120px;
   position: relative;
+  padding-left: 140px;
   .img {
-    // position: absolute;
-    // left: 20px;
+    position: absolute;
+    left: 20px;
     img {
       border-radius: 120px;
     }
   }
   .info {
-    // margin-left: 35px;
     font-size: 18px;
     line-height: 30px;
     margin-top: 20px;
+    margin-left: 15px;
+    .name {
+      font-size: 16px;
+    }
     .job {
       font-size: 16px;
     }
   }
 }
 .left-mid-block {
-  margin: 10px 0;
+  // margin: 10px 0;
   background-color: #fff;
   padding: 15px;
   .title {

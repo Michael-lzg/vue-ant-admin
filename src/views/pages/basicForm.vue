@@ -1,5 +1,5 @@
 <template>
-  <div class="form" style="width:600px">
+  <div style="width:600px">
     <a-form :form="form" @submit="handleSubmit">
       <a-form-item v-bind="formItemLayout" label="E-mail">
         <a-input v-decorator="[
