@@ -17,20 +17,16 @@
           </div>
         </div>
       </div>
+      <div class="right-block fl">
+        <div class="right-top-block">
+          <div class="title">常用网站</div>
+          <div class="right-top-block-item" v-for="(item,index) in netList" :key="index" @mouseover="changeActive($event)" @mouseout="removeActive($event)">
+            <div class="name"><img :src="item.icon" alt="" width="30">{{item.name}}</div>
+            <div class="desc">哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+          </div>
+        </div>
+      </div>
       <div class="left-block fl">
-        <!-- <div class="left-top-block">
-          <div class="img">
-            <img src="../../assets/img/admin.jpg" alt="" width="120">
-          </div>
-          <div class="info">
-            <div class="name c8">早安，admin！</div>
-            <div class="job">天道酬勤，自强不息</div>
-            <div class="tag">
-              <a-tag color="blue"> 很有想法的 </a-tag>
-              <a-tag color="blue"> 专注前端 </a-tag>
-            </div>
-          </div>
-        </div> -->
         <div class="left-mid-block">
           <div class="title">技术技能</div>
           javaScript
@@ -44,57 +40,50 @@
           react
           <a-progress :percent="70" strokeColor="#F5223C" />
         </div>
-        <div class="left-bot-block">
+        <!-- <div class="left-bot-block">
           <div class="title">友情链接</div>
           <div class="list clearfix">
             <div class="item fl" v-for="(item,index) in netList" :key="index">
               <img :src="item.icon" alt="" width="20">{{item.name}}
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
-      <div class="right-block fl">
-        <div class="tab">
-          <a-tabs default-active-key="1">
-            <a-tab-pane key="1" tab="掘金文章">
-              <articalList></articalList>
-            </a-tab-pane>
-            <a-tab-pane key="2" tab="github项目" force-render>
-              <githubList></githubList>
-            </a-tab-pane>
-            <a-tab-pane key="3" tab="开源项目">
-              Content of Tab Pane 3
-            </a-tab-pane>
-          </a-tabs>
-        </div>
-      </div>
+
     </div>
 
   </div>
 </template>
 
 <script>
-import articalList from '../../components/articalList'
-import githubList from '../../components/githubList'
+// import articalList from '../../components/articalList'
+// import githubList from '../../components/githubList'
 export default {
   name: 'adminIndex',
   data () {
     return {
       netList: [
-        { name: 'vue', icon: require('../../assets/icon/vue.png') },
-        { name: 'react', icon: require('../../assets/icon/react.png') },
-        { name: 'webpack', icon: require('../../assets/icon/webpack.png') },
-        { name: 'html', icon: require('../../assets/icon/html.png') },
         { name: '掘金', icon: require('../../assets/icon/juejin.png') },
         { name: '知乎', icon: require('../../assets/icon/zhihu.png') },
+        { name: 'github', icon: require('../../assets/icon/github.png') },
         { name: 'segmentfault', icon: require('../../assets/icon/segmentfault.png') },
-        { name: 'CSDN', icon: require('../../assets/icon/CSDN.png') }
+        { name: 'CSDN', icon: require('../../assets/icon/CSDN.png') },
+        { name: 'webpack', icon: require('../../assets/icon/webpack.png') }
       ]
     }
   },
-  components: { articalList, githubList },
+  // components: { articalList, githubList },
   methods: {
-    handleClick () { }
+    changeActive ($event) {
+      if ($event.target.className === 'right-top-block-item') {
+        $event.target.classList.add('active')
+      }
+    },
+    removeActive ($event) {
+      if ($event.target.className === 'right-top-block-item active') {
+        $event.target.classList.remove('active')
+      }
+    }
   }
 }
 </script>
@@ -110,11 +99,12 @@ export default {
   height: 100%;
   width: 100%;
 }
-.top-info-block{
+.top-info-block {
   margin-bottom: 10px;
 }
 .left-block {
   width: 30%;
+  padding-left: 15px;
 }
 .left-top-block {
   background-color: white;
@@ -142,15 +132,8 @@ export default {
   }
 }
 .left-mid-block {
-  // margin: 10px 0;
   background-color: #fff;
   padding: 15px;
-  .title {
-    font-size: 18px;
-    padding: 5px 0;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 5px;
-  }
 }
 .left-bot-block {
   margin: 15px 0;
@@ -173,10 +156,40 @@ export default {
 }
 .right-block {
   width: 70%;
-  padding-left: 15px;
-  .tab {
+  .right-top-block {
+    background-color: #fff;
     padding: 15px;
-    background-color: white;
+    padding-bottom: 38px;
+    .right-top-block-item {
+      width: 31%;
+      display: inline-block;
+      height: 90px;
+      // background-color: #eee;
+      margin-right: 2%;
+      margin-top: 2%;
+      padding: 10px;
+      cursor: pointer;
+      border: 1px solid #e4ecf3;
+      border-radius: 4px;
+      .name {
+        font-weight: 700;
+        color: #30333c;
+        margin-bottom: 10px;
+        > img {
+          margin-right: 8px;
+          border-radius: 50%;
+        }
+      }
+    }
+    // .active {
+    //   background-color: rgb(107, 113, 132);
+    // }
   }
+}
+.title {
+  font-size: 18px;
+  padding: 5px 0;
+  border-bottom: 1px solid #e4ecf3;
+  margin-bottom: 5px;
 }
 </style>
